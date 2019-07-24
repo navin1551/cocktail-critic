@@ -8,6 +8,9 @@ export default class Review extends React.Component {
         <p>{this.props.name}</p>
         <br />
         <span>{this.props.comment}</span>
+        <br />
+        <br />
+        <span>{this.props.rating}</span>
       </li>
     );
   }

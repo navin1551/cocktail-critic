@@ -1,6 +1,5 @@
 import React from "react";
 import ReviewForm from "../ReviewForm/ReviewForm";
-import StarRating from "../StarRating/StarRating";
 import "./Cocktail.css";
 
 export default class Cocktail extends React.Component {
@@ -26,7 +25,7 @@ export default class Cocktail extends React.Component {
         <br />
         <span>{this.props.ingredient6}</span>
         <br />
-        <ReviewForm />
+        <ReviewForm name={this.props.name} />
       </li>
     );
   }

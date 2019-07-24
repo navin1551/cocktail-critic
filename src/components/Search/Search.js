@@ -34,10 +34,9 @@ export default class Search extends React.Component {
       });
   };
 
-  inputChangeHandle = e => {
-    e.preventDefault();
+  inputChangeHandle = query => {
     this.setState({
-      query: e.target.value
+      query
     });
   };
 
@@ -61,7 +60,7 @@ export default class Search extends React.Component {
         <h3 className="search-title">Search and review cocktails!</h3>
         <form onSubmit={this.submitSearchHandle} className="search-form">
           <input
-            onChange={this.inputChangeHandle}
+            onChange={e => this.inputChangeHandle(e.target.value)}
             type="text"
             id="search-input"
             ref="searchInput"
