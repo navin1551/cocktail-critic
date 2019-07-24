@@ -1,14 +1,19 @@
 import React from "react";
+import Cocktail from "../Cocktail/Cocktail";
 import "./Search.css";
 
 export default class Search extends React.Component {
-  state = {
-    searchTerm: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: "",
+      searchResults: []
+    };
+  }
 
   submitSearchHandle = e => {
     e.preventDefault();
-    let search = this.state.searchTerm;
+    let search = this.state.query;
     let url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
 
     fetch(url)
@@ -18,8 +23,11 @@ export default class Search extends React.Component {
         }
         return res.json();
       })
-      .then(res => {
-        console.log(res);
+      .then(responseData => {
+        console.log(responseData);
+        this.setState({
+          searchResults: responseData.drinks
+        });
       })
       .catch(error => {
         console.log({ error });
@@ -29,13 +37,17 @@ export default class Search extends React.Component {
   inputChangeHandle = e => {
     e.preventDefault();
     this.setState({
-      searchTerm: e.target.value
+      query: e.target.value
     });
   };
 
   render() {
+    let drinkResults = this.state.searchResults.map(drink => (
+      <Cocktail name={drink.strDrink} key={drink.idDrink} />
+    ));
+
     return (
-      <div>
+      <section>
         <h3 className="search-title">Search and review cocktails!</h3>
         <form onSubmit={this.submitSearchHandle} className="search-form">
           <input
@@ -49,7 +61,10 @@ export default class Search extends React.Component {
             Search
           </button>
         </form>
-      </div>
+        <div>
+          <ul>{drinkResults}</ul>
+        </div>
+      </section>
     );
   }
 }

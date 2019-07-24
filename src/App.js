@@ -13,6 +13,12 @@ export default class App extends React.Component {
     searchResults: []
   };
 
+  handleCocktailSearch = cocktails => {
+    this.setState({
+      cocktails: cocktails
+    });
+  };
+
   render() {
     return (
       <div className="app">
