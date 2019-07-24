@@ -1,0 +1,15 @@
+#search-input {
+  border: 1px solid black;
+}
+
+.search-title {
+  text-align: center;
+}
+
+.search-form {
+  text-align: center;
+}
+
+#search-button {
+  border: 1px solid black;
+}

@@ -1,0 +1,15 @@
+.register-form {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#create-account-button {
+  border: 1px solid black;
+}
+
+#first-name-input,
+#last-name-input,
+#register-email-input,
+#register-password-input {
+  border: 1px solid black;
+}
