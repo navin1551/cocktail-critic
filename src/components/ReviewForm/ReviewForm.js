@@ -28,9 +28,12 @@ export default class ReviewForm extends React.Component {
 
   reviewSubmitHandle = e => {
     e.preventDefault();
-    const { id, comments, rating, name } = this.state;
+    let { id, comments, rating, name } = this.state;
+    id = this.context.reviews.length + 1;
+    rating = parseInt(rating);
     const newReview = { id, comments, rating, name };
-    console.log(newReview);
+    this.context.addReview(newReview);
+    console.log(this.context.reviews);
   };
 
   render() {

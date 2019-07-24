@@ -16,9 +16,17 @@ export default class App extends React.Component {
     searchResults: []
   };
 
-  handleCocktailSearch = cocktails => {
+  cocktailSearchHandle = cocktails => {
     this.setState({
       cocktails: cocktails
+    });
+  };
+
+  addReviewHandle = newReview => {
+    let currentReviews = this.state.reviews;
+    currentReviews.push(newReview);
+    this.setState({
+      reviews: currentReviews
     });
   };
 
@@ -26,7 +34,8 @@ export default class App extends React.Component {
     const contextValue = {
       cocktails: this.state.cocktails,
       reviews: this.state.reviews,
-      searchResults: this.state.searchResults
+      searchResults: this.state.searchResults,
+      addReview: this.addReviewHandle
     };
 
     return (
