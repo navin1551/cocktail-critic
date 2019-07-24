@@ -2,9 +2,18 @@
   border: 1px solid black;
   width: 90%;
   margin-left: 13px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 textarea {
+  border: 1px solid black;
+}
+
+#review-submit-button {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+#rating-select {
   border: 1px solid black;
 }

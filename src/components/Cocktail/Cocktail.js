@@ -1,5 +1,6 @@
 import React from "react";
 import ReviewForm from "../ReviewForm/ReviewForm";
+import StarRating from "../StarRating/StarRating";
 import "./Cocktail.css";
 
 export default class Cocktail extends React.Component {

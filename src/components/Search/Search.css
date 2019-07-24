@@ -13,3 +13,7 @@
 #search-button {
   border: 1px solid black;
 }
+
+.drink-results-list {
+  width: 90%;
+}
