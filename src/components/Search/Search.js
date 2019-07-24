@@ -43,7 +43,17 @@ export default class Search extends React.Component {
 
   render() {
     let drinkResults = this.state.searchResults.map(drink => (
-      <Cocktail name={drink.strDrink} key={drink.idDrink} />
+      <Cocktail
+        name={drink.strDrink}
+        key={drink.idDrink}
+        ingredient1={drink.strIngredient1}
+        ingredient2={drink.strIngredient2}
+        ingredient3={drink.strIngredient3}
+        ingredient4={drink.strIngredient4}
+        ingredient5={drink.strIngredient5}
+        ingredient6={drink.strIngredient6}
+        image={drink.strDrinkThumb}
+      />
     ));
 
     return (

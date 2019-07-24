@@ -1,0 +1,11 @@
+.drink-list-items {
+  border: 1px solid black;
+  list-style: none;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.drink-pics {
+  width: 150px;
+  height: 150px;
+}
