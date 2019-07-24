@@ -2,10 +2,14 @@ import React from "react";
 import "./Search.css";
 
 export default class Search extends React.Component {
+  state = {
+    searchTerm: ""
+  };
+
   submitSearchHandle = e => {
-    console.log(e);
     e.preventDefault();
-    let url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${e}`;
+    let search = this.state.searchTerm;
+    let url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
 
     fetch(url)
       .then(res => {
@@ -22,14 +26,28 @@ export default class Search extends React.Component {
       });
   };
 
+  inputChangeHandle = e => {
+    e.preventDefault();
+    this.setState({
+      searchTerm: e.target.value
+    });
+  };
+
   render() {
     return (
       <div>
         <h3 className="search-title">Search and review cocktails!</h3>
         <form onSubmit={this.submitSearchHandle} className="search-form">
-          <input type="text" id="search-input" />
+          <input
+            onChange={this.inputChangeHandle}
+            type="text"
+            id="search-input"
+            ref="searchInput"
+          />
           <br />
-          <button id="search-button">Search</button>
+          <button type="submit" id="search-button">
+            Search
+          </button>
         </form>
       </div>
     );
