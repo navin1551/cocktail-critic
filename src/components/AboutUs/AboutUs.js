@@ -16,7 +16,18 @@ export default class AboutUs extends React.Component {
             keep track of what you liked and what you didn't!
           </p>
 
-          <p>All you have to do is sign in or sign up now to get started!</p>
+          <p>
+            Its simple, all you have to do is:
+            <br />
+            <br />
+            1. Sign up for a login credentials
+            <br />
+            <br />
+            2. Search for a cocktail you like or dislike
+            <br />
+            <br />
+            3. Write a review and give a rating for next time
+          </p>
         </div>
         <div className="sign-in-area">
           <SignInForm />
