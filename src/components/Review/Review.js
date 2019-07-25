@@ -1,4 +1,5 @@
 import React from "react";
+import StarRating from "../StarRating/StarRating";
 import "./Review.css";
 
 export default class Review extends React.Component {
@@ -15,7 +16,7 @@ export default class Review extends React.Component {
         <span>{this.props.comment}</span>
         <br />
         <br />
-        <span>Rating: {this.props.rating}</span>
+        <StarRating value={this.props.rating} />
       </li>
     );
   }

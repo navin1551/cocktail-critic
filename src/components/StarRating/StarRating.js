@@ -1,4 +1,5 @@
 import React from "react";
+import "./StarRating.css";
 
 export default class StarRating extends React.Component {
   render() {
