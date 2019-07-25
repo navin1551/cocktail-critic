@@ -9,6 +9,12 @@ export default class NavBar extends React.Component {
         <Link to="/register">
           <p id="register">Register</p>
         </Link>
+        <Link to="/search">
+          <p>Search</p>
+        </Link>
+        <Link to="/">
+          <p>Logout</p>
+        </Link>
       </nav>
     );
   }
