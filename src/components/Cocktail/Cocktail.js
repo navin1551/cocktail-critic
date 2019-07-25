@@ -25,7 +25,7 @@ export default class Cocktail extends React.Component {
         <br />
         <span>{this.props.ingredient6}</span>
         <br />
-        <ReviewForm name={this.props.name} />
+        <ReviewForm name={this.props.name} image={this.props.image} />
       </li>
     );
   }

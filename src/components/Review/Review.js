@@ -6,11 +6,16 @@ export default class Review extends React.Component {
     return (
       <li className="user-review-list-items">
         <p>{this.props.name}</p>
+        <img
+          src={this.props.image}
+          alt="reviewed drink pictures"
+          className="reviewed-drink-pics"
+        />
         <br />
         <span>{this.props.comment}</span>
         <br />
         <br />
-        <span>{this.props.rating}</span>
+        <span>Rating: {this.props.rating}</span>
       </li>
     );
   }

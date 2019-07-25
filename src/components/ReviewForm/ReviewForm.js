@@ -8,7 +8,9 @@ export default class ReviewForm extends React.Component {
     this.state = {
       comments: "",
       rating: "",
-      name: this.props.name
+      name: this.props.name,
+      image: this.props.image,
+      modified: new Date()
     };
   }
 
@@ -28,10 +30,10 @@ export default class ReviewForm extends React.Component {
 
   reviewSubmitHandle = e => {
     e.preventDefault();
-    let { id, comments, rating, name } = this.state;
+    let { id, comments, rating, name, image, modified } = this.state;
     id = this.context.reviews.length + 1;
     rating = parseInt(rating);
-    const newReview = { id, comments, rating, name };
+    const newReview = { id, comments, rating, name, image, modified };
     this.context.addReview(newReview);
     console.log(this.context.reviews);
   };

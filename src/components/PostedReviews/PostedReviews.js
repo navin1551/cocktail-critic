@@ -13,6 +13,7 @@ export default class PostedReviews extends React.Component {
         comment={review.comments}
         key={review.id}
         rating={review.rating}
+        image={review.image}
       />
     ));
     return (
