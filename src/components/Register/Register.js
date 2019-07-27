@@ -2,6 +2,20 @@ import React from "react";
 import "./Register.css";
 
 export default class Register extends React.Component {
+  static defaultProps = {
+    onRegistrationSuccess: () => {}
+  };
+
+  state = { error: null };
+
+  loginSubmitHandle = e => {
+    e.preventDefault();
+    const user_name = e.target.children[1];
+    const password = e.target.children[5];
+    console.log(user_name);
+    console.log(password);
+  };
+
   render() {
     return (
       <div className="register-area">
@@ -24,6 +38,12 @@ export default class Register extends React.Component {
           </label>
           <br />
           <input type="email" id="register-email-input" />
+          <br />
+          <label htmlFor="user-name" id="user-name-label">
+            User Name
+          </label>
+          <br />
+          <input type="user-name" id="user-name-input" />
           <br />
           <label htmlFor="password" id="register-password-label">
             Password

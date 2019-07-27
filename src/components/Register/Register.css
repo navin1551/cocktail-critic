@@ -10,6 +10,7 @@
 #first-name-input,
 #last-name-input,
 #register-email-input,
-#register-password-input {
+#register-password-input,
+#user-name-input {
   border: 1px solid black;
 }

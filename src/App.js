@@ -9,7 +9,6 @@ import Search from "./components/Search/Search";
 import PostedReviews from "./components/PostedReviews/PostedReviews";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
 import config from "./config";
-import Store from "./Store";
 
 export default class App extends React.Component {
   state = {
