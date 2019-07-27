@@ -4,21 +4,26 @@ import TokenService from "../../services/token-service";
 import "./NavBar.css";
 
 export default class NavBar extends React.Component {
+  handleLogOutClick = () => {
+    TokenService.clearAuthToken();
+    window.location = "/";
+  };
+
   renderLogoutLink() {
     return (
       <div>
-        <Link to="/">
+        <Link to="/" onClick={this.handleLogOutClick}>
           <p>Logout</p>
         </Link>
       </div>
     );
   }
 
-  renderLoginLink() {
+  renderRegisterLink() {
     return (
       <div>
-        <Link to="/">
-          <p>Login</p>
+        <Link to="/register">
+          <p id="register">Register</p>
         </Link>
       </div>
     );
@@ -26,15 +31,12 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <nav className="nav-bar-area">
-        <Link to="/register">
-          <p id="register">Register</p>
-        </Link>
         <Link to="/search">
           <p>Search</p>
         </Link>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
-          : this.renderLoginLink()}
+          : this.renderRegisterLink()}
       </nav>
     );
   }

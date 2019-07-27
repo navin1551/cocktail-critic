@@ -1,6 +1,7 @@
 import React from "react";
 import CocktailContext from "../../CocktailContext";
 import config from "../../config";
+import TokenService from "../../services/token-service";
 import "./ReviewForm.css";
 
 export default class ReviewForm extends React.Component {
@@ -34,11 +35,13 @@ export default class ReviewForm extends React.Component {
     let { id, comment, rating, name, image, date_created } = this.state;
     rating = parseInt(rating);
     const newReview = { id, comment, rating, name, image, date_created };
+
     fetch(`${config.API_ENDPOINT}/reviews`, {
       method: "POST",
       body: JSON.stringify(newReview),
       headers: {
-        "content-type": "application/json"
+        "content-type": "application/json",
+        authorization: `basic ${TokenService.getAuthToken()}`
       }
     })
       .then(res => {

@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicOnlyRoute from "./routes/PublicOnlyRoute";
 import CocktailContext from "./CocktailContext";
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
