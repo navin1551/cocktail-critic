@@ -1,16 +1,17 @@
 import React from "react";
 import CocktailContext from "../../CocktailContext";
+import config from "../../config";
 import "./ReviewForm.css";
 
 export default class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: "",
+      comment: "",
       rating: "",
       name: this.props.name,
       image: this.props.image,
-      modified: new Date()
+      date_created: new Date()
     };
   }
 
@@ -18,7 +19,7 @@ export default class ReviewForm extends React.Component {
 
   commentChangeHandle = comment => {
     this.setState({
-      comments: comment
+      comment: comment
     });
   };
 
@@ -30,12 +31,30 @@ export default class ReviewForm extends React.Component {
 
   reviewSubmitHandle = e => {
     e.preventDefault();
-    let { id, comments, rating, name, image, modified } = this.state;
-    id = this.context.reviews.length + 1;
+    let { id, comment, rating, name, image, date_created } = this.state;
     rating = parseInt(rating);
-    const newReview = { id, comments, rating, name, image, modified };
-    this.context.addReview(newReview);
-    console.log(this.context.reviews);
+    const newReview = { id, comment, rating, name, image, date_created };
+    fetch(`${config.API_ENDPOINT}/reviews`, {
+      method: "POST",
+      body: JSON.stringify(newReview),
+      headers: {
+        "content-type": "application/json"
+      }
+    }).then(res => {
+      if (!res.ok) {
+        throw new Error("Something went wrong please try again later");
+      }
+      res.json().then(data => {
+        this.context.addReview(data);
+        this.setState({
+          name: "",
+          comment: "",
+          rating: "",
+          image: "",
+          date_created: new Date()
+        });
+      });
+    });
   };
 
   render() {
