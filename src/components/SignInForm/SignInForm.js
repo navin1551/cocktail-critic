@@ -39,7 +39,7 @@ export default class SignInForm extends React.Component {
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
         this.props.onLoginSuccess();
-        window.location = "/";
+        window.location = "/posted-reviews";
       })
       .catch(res => {
         this.setState({ error: res.error });
