@@ -1,5 +1,6 @@
 import React from "react";
 import TokenService from "../../services/token-service";
+import AuthApiService from "../../services/auth-api-service";
 import "./SignInForm.css";
 
 export default class SignInForm extends React.Component {
@@ -23,11 +24,33 @@ export default class SignInForm extends React.Component {
     this.props.onLoginSuccess();
   };
 
+  handleSubmitJwtAuth = ev => {
+    ev.preventDefault();
+    this.setState({ error: null });
+    const user_name = ev.target.children[1];
+    const password = ev.target.children[4];
+
+    AuthApiService.postLogin({
+      user_name: user_name.value,
+      password: password.value
+    })
+      .then(res => {
+        user_name.value = "";
+        password.value = "";
+        TokenService.saveAuthToken(res.authToken);
+        this.props.onLoginSuccess();
+        window.location = "/";
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
+  };
+
   render() {
     return (
       <div>
         <h3>Sign In</h3>
-        <form onSubmit={this.loginSubmitHandle}>
+        <form onSubmit={this.handleSubmitJwtAuth}>
           <label htmlFor="user-name" id="login-user-name-label">
             User Name
           </label>
