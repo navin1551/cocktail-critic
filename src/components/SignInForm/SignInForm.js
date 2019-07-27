@@ -19,7 +19,7 @@ export default class SignInForm extends React.Component {
           <br />
           <input type="password" id="password-input" />
           <br />
-          <button>Sign In</button>
+          <button id="sign-in-button">Sign In</button>
         </form>
       </div>
     );

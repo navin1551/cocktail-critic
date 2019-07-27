@@ -7,14 +7,33 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Register from "./components/Register/Register";
 import Search from "./components/Search/Search";
 import PostedReviews from "./components/PostedReviews/PostedReviews";
+import ProfilePage from "./components/ProfilePage/ProfilePage";
+import config from "./config";
 import Store from "./Store";
 
 export default class App extends React.Component {
   state = {
     cocktails: [],
-    reviews: Store.reviews,
+    reviews: [],
     searchResults: []
   };
+
+  componentDidMount() {
+    Promise.all([fetch(`${config.API_ENDPOINT}/reviews`)])
+      .then(([revRes]) => {
+        if (!revRes) return revRes.json().then(e => Promise.reject(e));
+
+        return Promise.all([revRes.json()]);
+      })
+      .then(([reviews]) => {
+        this.setState({
+          reviews
+        });
+      })
+      .catch(error => {
+        console.error({ error });
+      });
+  }
 
   cocktailSearchHandle = cocktails => {
     this.setState({
@@ -51,6 +70,7 @@ export default class App extends React.Component {
               <Route path="/register" component={Register} />
               <Route path="/search" component={Search} />
               <Route path="/posted-reviews" component={PostedReviews} />
+              <Route path="/profile-page" component={ProfilePage} />
             </Switch>
           </main>
         </div>
