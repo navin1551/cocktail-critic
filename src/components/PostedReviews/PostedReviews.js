@@ -10,7 +10,7 @@ export default class PostedReviews extends React.Component {
     let postedReviews = this.context.reviews.map(review => (
       <Review
         name={review.name}
-        comment={review.comments}
+        comment={review.comment}
         key={review.id}
         rating={review.rating}
         image={review.image}

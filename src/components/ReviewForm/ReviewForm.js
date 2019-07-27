@@ -40,11 +40,14 @@ export default class ReviewForm extends React.Component {
       headers: {
         "content-type": "application/json"
       }
-    }).then(res => {
-      if (!res.ok) {
-        throw new Error("Something went wrong please try again later");
-      }
-      res.json().then(data => {
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Something went wrong please try again later");
+        }
+        return res.json();
+      })
+      .then(data => {
         this.context.addReview(data);
         this.setState({
           name: "",
@@ -53,8 +56,10 @@ export default class ReviewForm extends React.Component {
           image: "",
           date_created: new Date()
         });
+      })
+      .catch(error => {
+        console.error({ error });
       });
-    });
   };
 
   render() {
