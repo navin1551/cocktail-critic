@@ -36,9 +36,19 @@ export default class NavBar extends React.Component {
       </Link>
     );
   }
+
+  renderProfilePageLink() {
+    return (
+      <Link to="/profile-page">
+        <p>Profile</p>
+      </Link>
+    );
+  }
+
   render() {
     return (
       <nav className="nav-bar-area">
+        {TokenService.hasAuthToken() ? this.renderProfilePageLink() : null}
         {TokenService.hasAuthToken() ? this.renderSearchLink() : null}
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

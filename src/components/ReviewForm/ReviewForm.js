@@ -45,12 +45,14 @@ export default class ReviewForm extends React.Component {
       }
     })
       .then(res => {
+        console.log(res);
         if (!res.ok) {
           throw new Error("Something went wrong please try again later");
         }
         return res.json();
       })
       .then(data => {
+        data.user_name = data.username[0].user_name;
         this.context.addReview(data);
         this.setState({
           name: "",
