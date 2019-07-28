@@ -8,7 +8,7 @@ export default class AboutUs extends React.Component {
       <div>
         <div className="welcome-area">
           <h3>Welcome to Cocktail Critic!</h3>
-          <p>
+          <p className="about-us-description">
             Have you ever ordered or has someone bought you a drink that you
             absolutely loved or absolutely hated? Did you want to keep track of
             that for next time? This is where your search ends! Search for a
@@ -16,8 +16,10 @@ export default class AboutUs extends React.Component {
             keep track of what you liked and what you didn't!
           </p>
 
-          <p>
-            Its simple, all you have to do is:
+          <p className="about-us-instructions">
+            <span id="instructions-title">
+              Its simple, all you have to do is:
+            </span>
             <br />
             <br />
             1. Sign up for a login credentials

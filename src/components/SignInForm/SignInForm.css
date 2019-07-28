@@ -1,8 +1,15 @@
 #login-user-name-input,
 #password-input {
   border: 1px solid black;
+  height: 24px;
+  width: 180px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 #sign-in-button {
   border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: 14px;
 }

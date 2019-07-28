@@ -57,13 +57,13 @@ export default class SignInForm extends React.Component {
         <h3>Sign In</h3>
         <form onSubmit={e => this.handleSubmitJwtAuth(e)}>
           <label htmlFor="user-name" id="login-user-name-label">
-            User Name
+            User Name:
           </label>
           <br />
           <input type="text" id="login-user-name-input" name="user_name" />
           <br />
-          <label htmlFor="password" id="password-label">
-            Password
+          <label htmlFor="password" id="login-password-label">
+            Password:
           </label>
           <br />
           <input type="password" id="password-input" name="password" />

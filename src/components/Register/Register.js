@@ -43,50 +43,54 @@ export default class Register extends React.Component {
   render() {
     return (
       <div className="register-area">
-        <h3>Sign up to start rating your favorite cocktails now!</h3>
+        <h3 id="register-title">
+          Sign up to start rating your favorite cocktails now!
+        </h3>
         <form
           className="register-form"
           onSubmit={e => this.registerSubmitHandle(e)}
         >
           <label htmlFor="first-name" id="first-name-label">
-            First Name
+            First Name:
           </label>
           <br />
           <input type="text" id="first-name-input" />
           <br />
           <label htmlFor="last-name" id="last-name-label">
-            Last Name
+            Last Name:
           </label>
           <br />
           <input type="text" id="last-name-input" />
           <br />
           <label htmlFor="email" id="register-email-label">
-            Email
+            Email:
           </label>
           <br />
           <input type="email" id="register-email-input" />
           <br />
           <label htmlFor="user-name" id="user-name-label">
-            User Name
+            User Name:
           </label>
           <br />
           <input type="user-name" id="user-name-input" />
           <br />
           <label htmlFor="password" id="register-password-label">
-            Password
+            Password:
           </label>
           <br />
           <input type="password" id="register-password-input" />
           <br />
           <button id="create-account-button">Create Account</button>
           <br />
-          <p>*All fields are required</p>
-          <p>*Password must be between 8 and 72 characters long</p>
-          <p>*Password cannot begin or end with empty spaces</p>
-          <p>
-            *Password must have atleast 1 uppercase, 1 lowercase, 1 number and 1
-            special character
-          </p>
+          <div className="password-restrictions">
+            <p>*All fields are required</p>
+            <p>*Password must be between 8 and 72 characters long</p>
+            <p>*Password cannot begin or end with empty spaces</p>
+            <p>
+              *Password must have atleast 1 uppercase, 1 lowercase, 1 number and
+              1 special character
+            </p>
+          </div>
         </form>
       </div>
     );
