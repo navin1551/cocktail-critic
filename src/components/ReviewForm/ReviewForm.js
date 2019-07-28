@@ -49,7 +49,7 @@ export default class ReviewForm extends React.Component {
         if (!res.ok) {
           throw new Error("Something went wrong please try again later");
         }
-        return res.json();
+        return res.json().then((window.location = "/posted-reviews"));
       })
       .then(data => {
         data.user_name = data.username[0].user_name;
