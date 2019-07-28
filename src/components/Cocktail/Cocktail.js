@@ -30,7 +30,7 @@ export default class Cocktail extends React.Component {
         </div>
         <div>
           <span id="cocktail-search-category">Category:</span>
-          <span>{this.props.category}</span>
+          <span id="cocktail-category">{this.props.category}</span>
         </div>
         <br />
         <ReviewForm name={this.props.name} image={this.props.image} />

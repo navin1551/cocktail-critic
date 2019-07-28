@@ -3,6 +3,8 @@
   list-style: none;
   text-align: center;
   margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .drink-pics {
@@ -29,4 +31,30 @@
 
 #cocktail-search-category {
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  #cocktail-search-name {
+    font-size: 40px;
+  }
+
+  .drink-pics {
+    width: 380px;
+    height: 380px;
+  }
+
+  .cocktail-search-ingredients {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  #cocktail-search-category,
+  #cocktail-category {
+    font-size: 30px;
+  }
+
+  .drink-list-items {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

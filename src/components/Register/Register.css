@@ -36,4 +36,37 @@
 
 #register-error {
   color: red;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+  .register-form {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+  #register-title {
+    font-size: 28px;
+  }
+
+  #first-name-label,
+  #last-name-label,
+  #register-email-label,
+  #user-name-label,
+  #register-password-label {
+    font-size: 24px;
+  }
+
+  #first-name-input,
+  #last-name-input,
+  #register-email-input,
+  #register-password-input,
+  #user-name-input {
+    height: 30px;
+    width: 280px;
+    margin-top: 10px;
+  }
+
+  .password-restrictions {
+    font-size: 16px;
+  }
 }

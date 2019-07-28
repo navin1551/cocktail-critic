@@ -36,3 +36,30 @@ textarea {
   margin-block-end: 10px;
   font-size: 14px;
 }
+
+@media screen and (min-width: 768px) {
+  #review-form-title {
+    font-size: 34px;
+  }
+
+  #how-did-you-like-it {
+    font-size: 22px;
+  }
+
+  #review-input {
+    width: 400px;
+    height: 150px;
+  }
+
+  #search-rating-label {
+    font-size: 22px;
+  }
+
+  #rating-select {
+    font-size: 18px;
+  }
+
+  #review-submit-button {
+    font-size: 20px;
+  }
+}

@@ -21,3 +21,20 @@
 .drink-results-list {
   width: 90%;
 }
+
+@media screen and (min-width: 768px) {
+  .search-title {
+    font-size: 30px;
+  }
+
+  #search-input {
+    height: 38px;
+    width: 320px;
+  }
+
+  #search-button {
+    font-size: 26px;
+    width: 140px;
+    margin-top: 22px;
+  }
+}

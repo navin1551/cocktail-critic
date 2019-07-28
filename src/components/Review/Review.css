@@ -21,4 +21,21 @@
 #review-drink-comment {
   font-size: 20px;
   line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #review-drink-name {
+    font-size: 38px;
+  }
+
+  .reviewed-drink-pics {
+    width: 380px;
+    height: 380px;
+  }
+
+  #review-drink-comment {
+    font-size: 32px;
+  }
 }
