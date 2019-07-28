@@ -67,10 +67,10 @@ export default class App extends React.Component {
           </section>
           <main>
             <Switch>
-              <Route exact path="/" component={AboutUs} />
-              <Route path="/register" component={Register} />
-              <Route path="/search" component={Search} />
-              <Route path="/posted-reviews" component={PostedReviews} />
+              <PublicOnlyRoute exact path="/" component={AboutUs} />
+              <PublicOnlyRoute path="/register" component={Register} />
+              <PrivateRoute path="/search" component={Search} />
+              <PrivateRoute path="/posted-reviews" component={PostedReviews} />
               <Route path="/profile-page" component={ProfilePage} />
             </Switch>
           </main>

@@ -33,6 +33,7 @@ export default class Register extends React.Component {
         user_name.value = "";
         password.value = "";
         this.props.onRegistrationSuccess();
+        window.location = "/";
       })
       .catch(res => {
         this.setState({ error: res.error });
