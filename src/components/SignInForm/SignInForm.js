@@ -27,8 +27,13 @@ export default class SignInForm extends React.Component {
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();
     this.setState({ error: null });
-    const user_name = ev.target.children[1];
-    const password = ev.target.children[4];
+    //const user_name = ev.target.children[1];
+    //const password = ev.target.children[4];
+    console.log(ev);
+
+    const { user_name, password } = ev.target;
+    console.log(user_name);
+    console.log(password);
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -50,18 +55,18 @@ export default class SignInForm extends React.Component {
     return (
       <div>
         <h3>Sign In</h3>
-        <form onSubmit={this.handleSubmitJwtAuth}>
+        <form onSubmit={e => this.handleSubmitJwtAuth(e)}>
           <label htmlFor="user-name" id="login-user-name-label">
             User Name
           </label>
           <br />
-          <input type="user-name" id="login-user-name-input" />
+          <input type="text" id="login-user-name-input" name="user_name" />
           <br />
           <label htmlFor="password" id="password-label">
             Password
           </label>
           <br />
-          <input type="password" id="password-input" />
+          <input type="password" id="password-input" name="password" />
           <br />
           <button id="sign-in-button">Sign In</button>
         </form>

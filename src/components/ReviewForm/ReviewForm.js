@@ -41,7 +41,7 @@ export default class ReviewForm extends React.Component {
       body: JSON.stringify(newReview),
       headers: {
         "content-type": "application/json",
-        authorization: `bearer ${TokenService.getAuthToken()}`
+        authorization: `basic ${TokenService.getAuthToken()}`
       }
     })
       .then(res => {
