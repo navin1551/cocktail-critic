@@ -1,4 +1,5 @@
 import React from "react";
+import AuthApiService from "../../services/auth-api-service";
 import "./Register.css";
 
 export default class Register extends React.Component {
@@ -8,19 +9,44 @@ export default class Register extends React.Component {
 
   state = { error: null };
 
-  loginSubmitHandle = e => {
+  registerSubmitHandle = e => {
     e.preventDefault();
-    const user_name = e.target.children[1];
-    const password = e.target.children[5];
-    console.log(user_name);
-    console.log(password);
+    const first_name = e.target.children[2];
+    const last_name = e.target.children[6];
+    const email = e.target.children[10];
+    const user_name = e.target.children[14];
+    const password = e.target.children[18];
+
+    this.setState({ error: null });
+
+    AuthApiService.postUser({
+      user_name: user_name.value,
+      password: password.value,
+      first_name: first_name.value,
+      last_name: last_name.value,
+      email: email.value
+    })
+      .then(user => {
+        first_name.value = "";
+        last_name.value = "";
+        email.value = "";
+        user_name.value = "";
+        password.value = "";
+        this.props.onRegistrationSuccess();
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
   };
 
   render() {
     return (
       <div className="register-area">
         <h3>Sign up to start rating your favorite cocktails now!</h3>
-        <form className="register-form">
+        <form
+          className="register-form"
+          onSubmit={e => this.registerSubmitHandle(e)}
+        >
           <label htmlFor="first-name" id="first-name-label">
             First Name
           </label>
