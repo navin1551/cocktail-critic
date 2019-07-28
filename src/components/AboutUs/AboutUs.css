@@ -29,3 +29,14 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+@media screen and (min-width: 768px) {
+  .about-us-area {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .welcome-area {
+    margin-right: 20px;
+  }
+}

@@ -6,7 +6,7 @@ import "./AboutUs.css";
 export default class AboutUs extends React.Component {
   render() {
     return (
-      <div>
+      <div className="about-us-area">
         <div className="welcome-area">
           <h3>Welcome to Cocktail Critic!</h3>
           <p className="about-us-description">
