@@ -12,7 +12,7 @@ export default class NavBar extends React.Component {
   renderLogoutLink() {
     return (
       <div>
-        <Link to="/" onClick={this.handleLogOutClick}>
+        <Link to="/" onClick={this.handleLogOutClick} className="nav-link">
           <p>Logout</p>
         </Link>
       </div>
@@ -22,7 +22,7 @@ export default class NavBar extends React.Component {
   renderRegisterLink() {
     return (
       <div>
-        <Link to="/register">
+        <Link to="/register" className="nav-link">
           <p id="register">Register</p>
         </Link>
       </div>
@@ -31,7 +31,7 @@ export default class NavBar extends React.Component {
 
   renderSearchLink() {
     return (
-      <Link to="/search">
+      <Link to="/search" className="nav-link">
         <p>Search</p>
       </Link>
     );
@@ -39,7 +39,7 @@ export default class NavBar extends React.Component {
 
   renderProfilePageLink() {
     return (
-      <Link to="/profile-page">
+      <Link to="/profile-page" className="nav-link">
         <p>Profile</p>
       </Link>
     );

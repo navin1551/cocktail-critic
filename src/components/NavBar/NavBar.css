@@ -5,6 +5,10 @@
   background-color: orange;
 }
 
+.nav-link {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .nav-bar-area {
     font-size: 26px;
