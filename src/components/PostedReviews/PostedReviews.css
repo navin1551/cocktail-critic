@@ -1,3 +1,7 @@
 .posted-reviews-list {
   width: 90%;
 }
+
+#posted-reviews-title {
+  text-align: center;
+}

@@ -6,8 +6,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="header-area">
-        <Link to="/posted-reviews">
-          <h1 id="header">Cocktail Critic</h1>
+        <Link className="header" to="/posted-reviews">
+          <h1 className="header">Cocktail Critic</h1>
         </Link>
       </header>
     );

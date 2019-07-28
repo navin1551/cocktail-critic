@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SignInForm from "../SignInForm/SignInForm";
 import "./AboutUs.css";
 
@@ -22,7 +23,7 @@ export default class AboutUs extends React.Component {
             </span>
             <br />
             <br />
-            1. Sign up for a login credentials
+            1. <Link to="/register">Sign up</Link> for login credentials
             <br />
             <br />
             2. Search for a cocktail you like or dislike

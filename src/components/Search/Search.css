@@ -1,5 +1,7 @@
 #search-input {
   border: 1px solid black;
+  height: 24px;
+  width: 180px;
 }
 
 .search-title {
@@ -12,6 +14,8 @@
 
 #search-button {
   border: 1px solid black;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .drink-results-list {

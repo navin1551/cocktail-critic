@@ -11,9 +11,28 @@ textarea {
 
 #review-submit-button {
   border: 1px solid black;
+  font-size: 12px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #rating-select {
   border: 1px solid black;
+}
+
+#review-form-title {
+  font-size: 28px;
+}
+
+#review-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 75px;
+}
+
+#rating-select {
+  margin-top: 10px;
+  margin-block-end: 10px;
+  font-size: 14px;
 }

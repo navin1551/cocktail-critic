@@ -70,15 +70,18 @@ export default class ReviewForm extends React.Component {
   render() {
     return (
       <form className="review-form" onSubmit={this.reviewSubmitHandle}>
-        <p>Add Review</p>
-        <span>How did you like it?</span>
+        <p id="review-form-title">Add Review</p>
+        <span id="how-did-you-like-it">How did you like it?</span>
         <br />
         <textarea
           type="text"
           onChange={e => this.commentChangeHandle(e.target.value)}
+          id="review-input"
         />
         <br />
-        <label htmlFor="rating">Rating</label>
+        <label htmlFor="rating" id="search-rating-label">
+          Rating:
+        </label>
         <br />
         <select
           type="select"

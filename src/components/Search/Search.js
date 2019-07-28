@@ -52,6 +52,7 @@ export default class Search extends React.Component {
         ingredient5={drink.strIngredient5}
         ingredient6={drink.strIngredient6}
         image={drink.strDrinkThumb}
+        category={drink.strCategory}
       />
     ));
 

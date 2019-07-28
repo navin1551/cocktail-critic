@@ -1,5 +1,6 @@
 .star-rating .fa-star {
   color: #0e2944;
+  margin-bottom: 14px;
 }
 
 @media screen and (min-width: 320px) {

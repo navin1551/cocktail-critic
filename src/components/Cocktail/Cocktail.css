@@ -6,7 +6,27 @@
 }
 
 .drink-pics {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+#cocktail-search-name {
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.cocktail-search-ingredients {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#search-ingredients {
+  font-weight: bold;
+}
+
+#cocktail-search-category {
+  font-weight: bold;
 }

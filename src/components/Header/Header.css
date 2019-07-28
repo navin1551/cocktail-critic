@@ -1,6 +1,7 @@
-#header {
+.header {
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
+  text-decoration: none;
 }
 
 .header-area {
