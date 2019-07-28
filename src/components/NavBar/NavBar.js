@@ -28,12 +28,18 @@ export default class NavBar extends React.Component {
       </div>
     );
   }
+
+  renderSearchLink() {
+    return (
+      <Link to="/search">
+        <p>Search</p>
+      </Link>
+    );
+  }
   render() {
     return (
       <nav className="nav-bar-area">
-        <Link to="/search">
-          <p>Search</p>
-        </Link>
+        {TokenService.hasAuthToken() ? this.renderSearchLink() : null}
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderRegisterLink()}
