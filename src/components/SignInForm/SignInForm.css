@@ -9,7 +9,20 @@
 
 #sign-in-button {
   border: 1px solid black;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 20px;
   font-size: 14px;
+}
+
+.alert-area {
+  color: red;
+  margin-bottom: 10px;
+}
+
+#user-password-span {
+  font-size: 12px;
+}
+
+.demo-login-area {
+  font-size: 12px;
+  line-height: 20px;
 }

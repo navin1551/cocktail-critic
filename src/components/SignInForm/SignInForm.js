@@ -11,7 +11,6 @@ export default class SignInForm extends React.Component {
   state = { error: null };
 
   loginSubmitHandle = e => {
-    //e.preventDefault();
     const user_name = e.target.children[1];
     const password = e.target.children[4];
 
@@ -27,13 +26,8 @@ export default class SignInForm extends React.Component {
   handleSubmitJwtAuth = ev => {
     ev.preventDefault();
     this.setState({ error: null });
-    //const user_name = ev.target.children[1];
-    //const password = ev.target.children[4];
-    console.log(ev);
 
     const { user_name, password } = ev.target;
-    console.log(user_name);
-    console.log(password);
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -52,6 +46,7 @@ export default class SignInForm extends React.Component {
   };
 
   render() {
+    const { error } = this.state;
     return (
       <div>
         <h3>Sign In</h3>
@@ -68,8 +63,23 @@ export default class SignInForm extends React.Component {
           <br />
           <input type="password" id="password-input" name="password" />
           <br />
+          <span id="user-password-span">
+            *User name/password are case sensitive
+          </span>
+          <br />
           <button id="sign-in-button">Sign In</button>
         </form>
+        <div className="demo-login-area">
+          <p>Demo login info:</p>
+          <span>User Name:</span>
+          <span>testuser1</span>
+          <br />
+          <span>Password:</span>
+          <span>Password1$</span>
+        </div>
+        <div className="alert-area" role="alert">
+          {error && <span className="red">{error}</span>}
+        </div>
       </div>
     );
   }

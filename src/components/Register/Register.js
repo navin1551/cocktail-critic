@@ -41,6 +41,7 @@ export default class Register extends React.Component {
   };
 
   render() {
+    const { error } = this.state;
     return (
       <div className="register-area">
         <h3 id="register-title">
@@ -81,6 +82,9 @@ export default class Register extends React.Component {
           <input type="password" id="register-password-input" />
           <br />
           <button id="create-account-button">Create Account</button>
+          <div role="alert" id="register-error">
+            {error && <p className="red-register">{error}</p>}
+          </div>
           <br />
           <div className="password-restrictions">
             <p>*All fields are required</p>
