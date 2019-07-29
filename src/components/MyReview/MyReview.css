@@ -10,7 +10,7 @@
   width: 200px;
   height: 200px;
   border: 1px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #my-review-drink-name {
@@ -20,7 +20,7 @@
 }
 
 #my-review-drink-comment {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 26px;
   padding-left: 10px;
   padding-right: 10px;
@@ -47,9 +47,28 @@
   .my-review-drink-pics {
     width: 380px;
     height: 380px;
+    margin-bottom: 30px;
   }
 
   #my-review-drink-comment {
-    font-size: 32px;
+    font-size: 26px;
+  }
+
+  .my-review-date-area {
+    font-size: 16px;
+  }
+
+  #my-review-delete-button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .my-review-date-area {
+    font-size: 22px;
+  }
+
+  #my-review-delete-button {
+    font-size: 20px;
   }
 }

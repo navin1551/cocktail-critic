@@ -4,14 +4,11 @@ import "./Cocktail.css";
 
 export default class Cocktail extends React.Component {
   render() {
+    const { name, image, category } = this.props;
     return (
       <li className="drink-list-items">
-        <p id="cocktail-search-name">{this.props.name}</p>
-        <img
-          src={this.props.image}
-          alt="drink pictures"
-          className="drink-pics"
-        />
+        <p id="cocktail-search-name">{name}</p>
+        <img src={image} alt="drink pictures" className="drink-pics" />
         <br />
         <div className="cocktail-search-ingredients">
           <span id="search-ingredients">Ingredients:</span>
@@ -30,7 +27,7 @@ export default class Cocktail extends React.Component {
         </div>
         <div>
           <span id="cocktail-search-category">Category:</span>
-          <span id="cocktail-category">{this.props.category}</span>
+          <span id="cocktail-category">{category}</span>
         </div>
         <br />
         <ReviewForm name={this.props.name} image={this.props.image} />

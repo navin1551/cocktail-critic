@@ -5,22 +5,22 @@ import "./Review.css";
 
 export default class Review extends React.Component {
   render() {
-    const { date } = this.props;
+    const { date, name, image, comment, rating, user } = this.props;
     return (
       <li className="user-review-list-items">
-        <p id="review-drink-name">{this.props.name}</p>
+        <p id="review-drink-name">{name}</p>
         <img
-          src={this.props.image}
+          src={image}
           alt="reviewed drink pictures"
           className="reviewed-drink-pics"
         />
         <br />
-        <span id="review-drink-comment">{this.props.comment}</span>
+        <span id="review-drink-comment">{comment}</span>
         <br />
         <br />
-        <StarRating value={this.props.rating} />
+        <StarRating value={rating} />
         <div className="user-date-review-info">
-          <span>{this.props.user}</span>
+          <span>{user}</span>
           <span>{format(date, "MM/DD/YYYY")}</span>
         </div>
       </li>

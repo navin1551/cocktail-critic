@@ -6,3 +6,9 @@
 .my-reviews-list {
   width: 90%;
 }
+
+@media screen and (min-width: 1024px) {
+  #my-reviews-title {
+    font-size: 30px;
+  }
+}

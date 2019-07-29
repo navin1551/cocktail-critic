@@ -10,7 +10,7 @@
   width: 200px;
   height: 200px;
   border: 1px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #review-drink-name {
@@ -20,10 +20,11 @@
 }
 
 #review-drink-comment {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 26px;
   padding-left: 10px;
   padding-right: 10px;
+  text-align: left;
 }
 
 .user-date-review-info {
@@ -41,9 +42,20 @@
   .reviewed-drink-pics {
     width: 380px;
     height: 380px;
+    margin-bottom: 30px;
   }
 
   #review-drink-comment {
-    font-size: 32px;
+    font-size: 26px;
+  }
+
+  .user-date-review-info {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .user-date-review-info {
+    font-size: 22px;
   }
 }

@@ -51,6 +51,7 @@ export default class Register extends React.Component {
           className="register-form"
           onSubmit={e => this.registerSubmitHandle(e)}
         >
+          <br />
           <label htmlFor="first-name" id="first-name-label">
             First Name:
           </label>
