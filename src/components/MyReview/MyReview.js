@@ -1,9 +1,37 @@
 import React from "react";
+import config from "../../config";
 import StarRating from "../StarRating/StarRating";
 import { format } from "date-fns";
 import "./MyReview.css";
+import CocktailContext from "../../CocktailContext";
 
 export default class MyReview extends React.Component {
+  static contextType = CocktailContext;
+
+  deleteReviewHandle = e => {
+    e.preventDefault();
+    const { id } = this.props;
+    fetch(`${config.API_ENDPOINT}/reviews/${id}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json"
+      }
+    })
+      .then(res => {
+        if (!res.ok) {
+          res.json.then(error => Promise.reject(error));
+          return null;
+        }
+      })
+      .then(() => {
+        this.context.deleteReview(id);
+        window.location = "/profile-page";
+      })
+      .catch(error => {
+        console.error({ error });
+      });
+  };
+
   render() {
     const { date } = this.props;
     return (
@@ -21,6 +49,12 @@ export default class MyReview extends React.Component {
         <StarRating value={this.props.rating} />
         <div className="my-review-date-area">
           <span>{format(date, "MM/DD/YYYY")}</span>
+          <button
+            onClick={this.deleteReviewHandle}
+            id="my-review-delete-button"
+          >
+            Delete
+          </button>
         </div>
       </li>
     );

@@ -37,6 +37,8 @@ export default class ProfilePage extends React.Component {
     let myReviewsList = this.state.reviews.map(review => {
       return (
         <MyReview
+          key={review.id}
+          id={review.id}
           name={review.name}
           image={review.image}
           comment={review.comment}

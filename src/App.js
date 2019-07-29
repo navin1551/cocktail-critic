@@ -50,12 +50,20 @@ export default class App extends React.Component {
     });
   };
 
+  deleteReviewHandle = id => {
+    let updatedReplies = this.state.reviews.filter(review => review.id !== id);
+    this.setState({
+      reviews: updatedReplies
+    });
+  };
+
   render() {
     const contextValue = {
       cocktails: this.state.cocktails,
       reviews: this.state.reviews,
       searchResults: this.state.searchResults,
-      addReview: this.addReviewHandle
+      addReview: this.addReviewHandle,
+      deleteReview: this.deleteReviewHandle
     };
 
     return (
