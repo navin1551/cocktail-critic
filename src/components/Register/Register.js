@@ -11,11 +11,12 @@ export default class Register extends React.Component {
 
   registerSubmitHandle = e => {
     e.preventDefault();
-    const first_name = e.target.children[2];
-    const last_name = e.target.children[6];
-    const email = e.target.children[10];
-    const user_name = e.target.children[14];
-    const password = e.target.children[18];
+    console.log(e.target.children);
+    const first_name = e.target.children[3];
+    const last_name = e.target.children[7];
+    const email = e.target.children[11];
+    const user_name = e.target.children[15];
+    const password = e.target.children[19];
 
     this.setState({ error: null });
 
