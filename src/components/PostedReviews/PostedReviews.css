@@ -5,6 +5,7 @@
 #posted-reviews-title {
   text-align: center;
   font-size: 20px;
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 1024px) {

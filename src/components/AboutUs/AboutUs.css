@@ -5,6 +5,7 @@
   margin-right: auto;
   text-align: center;
   background-color: lightblue;
+  opacity: 0.9;
 }
 
 .sign-in-area {
@@ -16,6 +17,7 @@
   margin-top: 20px;
   background-color: lightblue;
   margin-bottom: 40px;
+  opacity: 0.9;
 }
 
 .about-us-description {
