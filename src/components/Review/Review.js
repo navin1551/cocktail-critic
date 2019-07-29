@@ -20,7 +20,7 @@ export default class Review extends React.Component {
         <br />
         <StarRating value={this.props.rating} />
         <div className="user-date-review-info">
-          <span>posted by: {this.props.user}</span>
+          <span>{this.props.user}</span>
           <span>{format(date, "MM/DD/YYYY")}</span>
         </div>
       </li>

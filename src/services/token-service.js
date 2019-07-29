@@ -24,6 +24,10 @@ const TokenService = {
     }
     let decoded = jwtDecode(token);
     return decoded.sub;
+  },
+
+  getUserId(userid) {
+    return window.sessionStorage.getItem("userid", userid);
   }
 };
 
