@@ -14,6 +14,8 @@ export default class PostedReviews extends React.Component {
         key={review.id}
         rating={review.rating}
         image={review.image}
+        date={review.date_created}
+        user={review.user_name}
       />
     ));
     return (

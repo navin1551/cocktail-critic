@@ -26,6 +26,13 @@
   padding-right: 10px;
 }
 
+.user-date-review-info {
+  font-size: 12px;
+  text-align: left;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
 @media screen and (min-width: 768px) {
   #review-drink-name {
     font-size: 38px;

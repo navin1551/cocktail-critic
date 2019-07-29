@@ -1,4 +1,5 @@
 import React from "react";
+import CocktailContext from "../../CocktailContext";
 
 export default class ProfilePage extends React.Component {
   constructor(props) {
@@ -7,6 +8,8 @@ export default class ProfilePage extends React.Component {
       reviews: []
     };
   }
+
+  static contextType = CocktailContext;
 
   render() {
     return (
