@@ -62,6 +62,10 @@
   #my-review-delete-button {
     font-size: 14px;
   }
+
+  .my-review-list-items {
+    margin-left: 35px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -71,5 +75,10 @@
 
   #my-review-delete-button {
     font-size: 20px;
+  }
+
+  .my-review-list-items {
+    margin-left: 85px;
+    margin-right: 50px;
   }
 }

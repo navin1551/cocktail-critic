@@ -53,10 +53,19 @@
   .user-date-review-info {
     font-size: 16px;
   }
+
+  .user-review-list-items {
+    margin-left: 35px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .user-date-review-info {
     font-size: 22px;
+  }
+
+  .user-review-list-items {
+    margin-left: 85px;
+    margin-right: 50px;
   }
 }
