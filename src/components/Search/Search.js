@@ -58,7 +58,7 @@ export default class Search extends React.Component {
 
     return (
       <section>
-        <h3 className="search-title">Search and review cocktails!</h3>
+        <h3 className="search-title">Search & Review Drinks!</h3>
         <form onSubmit={this.submitSearchHandle} className="search-form">
           <input
             onChange={e => this.inputChangeHandle(e.target.value)}

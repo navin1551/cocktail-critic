@@ -10,6 +10,7 @@ import Register from "./components/Register/Register";
 import Search from "./components/Search/Search";
 import PostedReviews from "./components/PostedReviews/PostedReviews";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import config from "./config";
 
 export default class App extends React.Component {
@@ -79,7 +80,8 @@ export default class App extends React.Component {
               <PublicOnlyRoute path="/register" component={Register} />
               <PrivateRoute path="/search" component={Search} />
               <PrivateRoute path="/posted-reviews" component={PostedReviews} />
-              <Route path="/profile-page" component={ProfilePage} />
+              <PrivateRoute path="/profile-page" component={ProfilePage} />
+              <Route component={NotFoundPage} />
             </Switch>
           </main>
         </div>
