@@ -26,7 +26,7 @@ export default class AboutUs extends React.Component {
             1. <Link to="/register">Sign up</Link> for login credentials
             <br />
             <br />
-            2. Search for a cocktail you like or dislike
+            2. Search for a drink you like or dislike
             <br />
             <br />
             3. Write a review and give a rating for next time

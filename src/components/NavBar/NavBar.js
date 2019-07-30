@@ -13,7 +13,9 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Link to="/" onClick={this.handleLogOutClick} className="nav-link">
-          <p>Logout</p>
+          <span title="logout">
+            <i className="fa fa-sign-out-alt" />
+          </span>
         </Link>
       </div>
     );
@@ -22,8 +24,11 @@ export default class NavBar extends React.Component {
   renderRegisterLink() {
     return (
       <div>
-        <Link to="/register" className="nav-link">
-          <p id="register">Register</p>
+        <Link to="/register" className="nav-link" id="register-link">
+          <span title="register">
+            Register
+            <i className="fa fa-user-plus" />
+          </span>
         </Link>
       </div>
     );
@@ -32,7 +37,9 @@ export default class NavBar extends React.Component {
   renderSearchLink() {
     return (
       <Link to="/search" className="nav-link">
-        <p>Search</p>
+        <span id="search-icon" title="search">
+          <i className="fa fa-search" />
+        </span>
       </Link>
     );
   }
@@ -40,7 +47,9 @@ export default class NavBar extends React.Component {
   renderProfilePageLink() {
     return (
       <Link to="/profile-page" className="nav-link">
-        <p>Profile</p>
+        <span title="my-profile">
+          <i className="fa fa-user-circle" />
+        </span>
       </Link>
     );
   }

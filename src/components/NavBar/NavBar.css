@@ -1,7 +1,7 @@
 .nav-bar-area {
   border: 1px solid black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: lightblue;
   opacity: 0.8;
 }
@@ -10,8 +10,39 @@
   text-decoration: none;
 }
 
+.fa-user-circle::before {
+  height: 33px;
+  width: 35px;
+}
+
+i {
+  font-size: x-large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .nav-bar-area {
     font-size: 26px;
+  }
+
+  i {
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-bar-area {
+    justify-content: space-between;
+  }
+
+  .fa-user-circle {
+    padding-left: 10px;
+  }
+
+  .fa-sign-out-alt {
+    padding-right: 10px;
   }
 }

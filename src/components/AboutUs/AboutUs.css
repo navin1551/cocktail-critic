@@ -58,4 +58,14 @@
   .sign-in-area {
     margin-right: 20px;
   }
+
+  #instructions-title {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #instructions-title {
+    padding-left: 90px;
+  }
 }

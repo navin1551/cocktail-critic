@@ -50,7 +50,7 @@ export default class SignInForm extends React.Component {
     const { error } = this.state;
     return (
       <div>
-        <h3 id="sign-in-title">Sign In</h3>
+        <h3 id="sign-in-title">Already have an account?</h3>
         <form onSubmit={e => this.handleSubmitJwtAuth(e)}>
           <label htmlFor="user-name" id="login-user-name-label">
             User Name:
