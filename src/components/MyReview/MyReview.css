@@ -5,6 +5,8 @@
   margin-top: 25px;
   background-color: lightblue;
   opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .my-review-drink-pics {
@@ -62,10 +64,6 @@
   #my-review-delete-button {
     font-size: 14px;
   }
-
-  .my-review-list-items {
-    margin-left: 35px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -78,7 +76,6 @@
   }
 
   .my-review-list-items {
-    margin-left: 85px;
-    margin-right: 50px;
+    width: 650px;
   }
 }

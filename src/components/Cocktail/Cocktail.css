@@ -54,15 +54,10 @@
   #cocktail-category {
     font-size: 30px;
   }
-
-  .drink-list-items {
-    margin-left: 35px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
   .drink-list-items {
-    margin-left: 85px;
-    margin-right: 50px;
+    width: 650px;
   }
 }
