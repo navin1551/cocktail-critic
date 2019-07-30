@@ -16,7 +16,7 @@ export default class ProfilePage extends React.Component {
   componentDidMount() {
     let user = TokenService.getUserId();
 
-    fetch(`${config.API_ENDPOINT}/reviews/myreviews/2`)
+    fetch(`${config.API_ENDPOINT}/reviews/myreviews/${user}`)
       .then(res => {
         if (!res.ok) {
           return Promise.reject(res.statusText);

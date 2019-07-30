@@ -26,8 +26,13 @@ const TokenService = {
     return decoded.sub;
   },
 
-  getUserId(userid) {
-    return window.sessionStorage.getItem("userid", userid);
+  getUserId() {
+    let token = TokenService.getAuthToken();
+    if (!token) {
+      return null;
+    }
+    let decoded = jwtDecode(token);
+    return decoded.user_id;
   }
 };
 
