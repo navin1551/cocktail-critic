@@ -19,6 +19,15 @@ i {
   font-size: x-large;
   margin-top: 5px;
   margin-bottom: 5px;
+  color: #ff43f3;
+}
+
+.fa-user-plus {
+  color: #ff43f3;
+}
+
+#register-span {
+  color: #ff43f3;
 }
 
 @media screen and (min-width: 768px) {

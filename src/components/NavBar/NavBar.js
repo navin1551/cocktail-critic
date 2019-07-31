@@ -25,7 +25,7 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Link to="/register" className="nav-link" id="register-link">
-          <span title="register">
+          <span id="register-span" title="register">
             Register
             <i className="fa fa-user-plus" />
           </span>

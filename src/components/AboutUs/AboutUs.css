@@ -57,6 +57,10 @@
     padding-left: 15px;
   }
 
+  .about-us-instructions {
+    padding-left: 15px;
+  }
+
   .sign-in-area {
     margin-right: 20px;
   }
@@ -68,6 +72,10 @@
 
 @media screen and (min-width: 1024px) {
   #instructions-title {
-    padding-left: 85px;
+    margin-left: 150px;
+  }
+
+  .about-us-instructions {
+    padding-left: 25px;
   }
 }

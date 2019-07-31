@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("https://chilledmagazine.com/wp-content/uploads/2016/04/prince-tribute-purple-cocktails-feat.jpg");
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 code {
