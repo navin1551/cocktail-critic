@@ -5,6 +5,8 @@
   width: 180px;
   margin-top: 5px;
   margin-bottom: 10px;
+  padding-left: 5px;
+  font-size: 16px;
 }
 
 #sign-in-button {
@@ -47,6 +49,8 @@
   #password-input {
     height: 38px;
     width: 280px;
+    padding-left: 8px;
+    font-size: 18px;
   }
 
   #user-password-span {
@@ -69,5 +73,13 @@
 
   .alert-area {
     margin-top: 26px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #login-user-name-input,
+  #password-input {
+    padding-left: 10px;
+    font-size: 20px;
   }
 }
