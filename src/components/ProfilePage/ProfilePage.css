@@ -4,8 +4,10 @@
   color: whitesmoke;
 }
 
-.my-reviews-list {
-  width: 90%;
+#my-reviews-ul {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 0px 0px 0px;
 }
 
 @media screen and (min-width: 1024px) {

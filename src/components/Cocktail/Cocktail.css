@@ -7,6 +7,7 @@
   margin-right: auto;
   background-color: lightblue;
   opacity: 0.9;
+  width: 248px;
 }
 
 .drink-pics {
@@ -52,6 +53,10 @@
   #cocktail-search-category,
   #cocktail-category {
     font-size: 30px;
+  }
+
+  .drink-list-items {
+    width: 650px;
   }
 }
 

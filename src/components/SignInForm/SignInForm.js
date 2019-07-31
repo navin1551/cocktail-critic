@@ -65,7 +65,7 @@ export default class SignInForm extends React.Component {
           <input type="password" id="password-input" name="password" />
           <br />
           <span id="user-password-span">
-            *User name/password are case sensitive
+            *user name/password are case sensitive
           </span>
           <br />
           <button id="sign-in-button">Sign In</button>

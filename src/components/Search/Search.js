@@ -72,7 +72,7 @@ export default class Search extends React.Component {
           </button>
         </form>
         <div className="drink-results-list">
-          <ul>{drinkResults}</ul>
+          <ul id="drink-results-ul">{drinkResults}</ul>
         </div>
       </section>
     );

@@ -22,7 +22,7 @@ export default class PostedReviews extends React.Component {
       <section>
         <h3 id="posted-reviews-title">Browse Recent Posted Reviews</h3>
         <div className="posted-reviews-list">
-          <ul>{postedReviews}</ul>
+          <ul id="posted-reviews-ul">{postedReviews}</ul>
         </div>
       </section>
     );
