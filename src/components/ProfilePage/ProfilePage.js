@@ -48,7 +48,7 @@ export default class ProfilePage extends React.Component {
       );
     });
     return (
-      <section>
+      <section role="contentinfo">
         <h3 id="my-reviews-title">Your Posted Reviews</h3>
         <div className="my-reviews-list">
           <ul id="my-reviews-ul">{myReviewsList}</ul>

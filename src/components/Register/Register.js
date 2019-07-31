@@ -44,7 +44,7 @@ export default class Register extends React.Component {
   render() {
     const { error } = this.state;
     return (
-      <div className="register-area">
+      <section className="register-area" role="contentinfo">
         <h3 id="register-title">
           Sign up to start rating your favorite cocktails now!
         </h3>
@@ -98,7 +98,7 @@ export default class Register extends React.Component {
             </p>
           </div>
         </form>
-      </div>
+      </section>
     );
   }
 }

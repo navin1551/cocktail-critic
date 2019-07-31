@@ -6,7 +6,7 @@ import "./AboutUs.css";
 export default class AboutUs extends React.Component {
   render() {
     return (
-      <div className="about-us-area">
+      <section className="about-us-area" role="contentinfo">
         <div className="welcome-area">
           <h3>Welcome to Cocktail Critic!</h3>
           <p className="about-us-description">
@@ -35,7 +35,7 @@ export default class AboutUs extends React.Component {
         <div className="sign-in-area">
           <SignInForm />
         </div>
-      </div>
+      </section>
     );
   }
 }

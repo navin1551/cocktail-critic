@@ -19,7 +19,7 @@ export default class PostedReviews extends React.Component {
       />
     ));
     return (
-      <section>
+      <section role="contentinfo">
         <h3 id="posted-reviews-title">Browse Recent Posted Reviews</h3>
         <div className="posted-reviews-list">
           <ul id="posted-reviews-ul">{postedReviews}</ul>

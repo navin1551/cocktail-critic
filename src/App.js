@@ -74,7 +74,7 @@ export default class App extends React.Component {
             <NavBar />
             <Header />
           </section>
-          <main>
+          <section role="main">
             <Switch>
               <PublicOnlyRoute exact path="/" component={AboutUs} />
               <PublicOnlyRoute path="/register" component={Register} />
@@ -83,7 +83,7 @@ export default class App extends React.Component {
               <PrivateRoute path="/profile-page" component={ProfilePage} />
               <Route component={NotFoundPage} />
             </Switch>
-          </main>
+          </section>
         </div>
       </CocktailContext.Provider>
     );

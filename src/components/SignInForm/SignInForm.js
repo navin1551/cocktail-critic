@@ -49,7 +49,7 @@ export default class SignInForm extends React.Component {
   render() {
     const { error } = this.state;
     return (
-      <div>
+      <section role="contentinfo">
         <h3 id="sign-in-title">Already have an account?</h3>
         <form onSubmit={e => this.handleSubmitJwtAuth(e)}>
           <label htmlFor="user-name" id="login-user-name-label">
@@ -81,7 +81,7 @@ export default class SignInForm extends React.Component {
         <div className="alert-area" role="alert">
           {error && <span className="red">{error}</span>}
         </div>
-      </div>
+      </section>
     );
   }
 }

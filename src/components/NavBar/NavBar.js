@@ -56,7 +56,7 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <nav className="nav-bar-area">
+      <nav className="nav-bar-area" role="navigation">
         {TokenService.hasAuthToken() ? this.renderProfilePageLink() : null}
         {TokenService.hasAuthToken() ? this.renderSearchLink() : null}
         {TokenService.hasAuthToken()

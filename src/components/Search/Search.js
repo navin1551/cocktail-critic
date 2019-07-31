@@ -24,7 +24,6 @@ export default class Search extends React.Component {
         return res.json();
       })
       .then(responseData => {
-        console.log(responseData);
         this.setState({
           searchResults: responseData.drinks
         });
@@ -57,7 +56,7 @@ export default class Search extends React.Component {
     ));
 
     return (
-      <section>
+      <section role="search">
         <h3 className="search-title">Search & Review Drinks!</h3>
         <form onSubmit={this.submitSearchHandle} className="search-form">
           <input
