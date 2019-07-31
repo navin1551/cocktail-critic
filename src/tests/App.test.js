@@ -13,3 +13,23 @@ it("renders without crashing", () => {
   );
   ReactDOM.unmountComponentAtNode(div);
 });
+
+/*
+import React from "react";
+import ReactDOM from "react-dom";
+import Cocktail from "../components/Cocktail/Cocktail";
+import { BrowserRouter } from "react-router-dom";
+import { shallow } from "enzyme";
+import Adapter from "enzyme-adapter-react-15";
+
+it("renders without crashing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(
+    <BrowserRouter>
+      <Cocktail />
+    </BrowserRouter>,
+    div
+  );
+  ReactDOM.unmountComponentAtNode(div);
+});
+*/

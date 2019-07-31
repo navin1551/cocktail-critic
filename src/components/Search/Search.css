@@ -19,6 +19,8 @@
   border: 1px solid black;
   font-size: 14px;
   margin-top: 10px;
+  -webkit-appearance: none;
+  background-color: lightgrey;
 }
 
 #drink-results-ul {

@@ -13,6 +13,8 @@
   border: 1px solid black;
   margin-top: 20px;
   font-size: 14px;
+  -webkit-appearance: none;
+  background-color: lightgrey;
 }
 
 .alert-area {
