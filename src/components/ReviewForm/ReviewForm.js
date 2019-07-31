@@ -45,7 +45,6 @@ export default class ReviewForm extends React.Component {
       }
     })
       .then(res => {
-        console.log(res);
         if (!res.ok) {
           throw new Error("Something went wrong please try again later");
         }
