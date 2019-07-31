@@ -2,6 +2,8 @@
   border: 1px solid black;
   height: 24px;
   width: 180px;
+  padding-left: 5px;
+  font-size: 16px;
 }
 
 .search-title {
@@ -31,11 +33,20 @@
   #search-input {
     height: 38px;
     width: 320px;
+    padding-left: 8px;
+    font-size: 18px;
   }
 
   #search-button {
     font-size: 26px;
     width: 140px;
     margin-top: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #search-input {
+    padding-left: 10px;
+    font-size: 20px;
   }
 }
