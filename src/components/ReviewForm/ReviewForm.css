@@ -30,6 +30,8 @@ textarea {
   margin-bottom: 10px;
   width: 200px;
   height: 75px;
+  padding-left: 5px;
+  font-size: 16px;
 }
 
 #rating-select {
@@ -50,6 +52,8 @@ textarea {
   #review-input {
     width: 400px;
     height: 150px;
+    padding-left: 8px;
+    font-size: 18px;
   }
 
   #search-rating-label {
@@ -75,5 +79,10 @@ textarea {
   .review-form {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #review-input {
+    padding-left: 10px;
+    font-size: 20px;
   }
 }
