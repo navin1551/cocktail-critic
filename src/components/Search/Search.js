@@ -7,7 +7,8 @@ export default class Search extends React.Component {
     super(props);
     this.state = {
       query: "",
-      searchResults: []
+      searchResults: [],
+      showNoResultsText: false
     };
   }
 
@@ -25,7 +26,8 @@ export default class Search extends React.Component {
       })
       .then(responseData => {
         this.setState({
-          searchResults: responseData.drinks
+          searchResults: responseData.drinks || [],
+          showNoResultsText: !responseData.drinks
         });
       })
       .catch(error => {
@@ -55,6 +57,10 @@ export default class Search extends React.Component {
       />
     ));
 
+    let noResultsMessage = this.state.showNoResultsText
+      ? "No Results, Try Again"
+      : null;
+
     return (
       <section role="search">
         <h3 className="search-title">Search & Review Drinks!</h3>
@@ -72,6 +78,7 @@ export default class Search extends React.Component {
         </form>
         <div className="drink-results-list">
           <ul id="drink-results-ul">{drinkResults}</ul>
+          <p id="no-results-message">{noResultsMessage}</p>
         </div>
       </section>
     );

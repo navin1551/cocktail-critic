@@ -29,6 +29,12 @@
   padding: 0px 0px 0px 0px;
 }
 
+#no-results-message {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
 @media screen and (min-width: 768px) {
   .search-title {
     font-size: 30px;
