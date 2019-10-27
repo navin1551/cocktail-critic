@@ -4,42 +4,42 @@ import "./Cocktail.css";
 
 export default class Cocktail extends React.Component {
   render() {
-    const ingredient1 = this.props.ingredient1.length ? (
+    const ingredient1 = this.props.ingredient1 ? (
       <div>
         <span>{this.props.ingredient1}</span>
         <br />
       </div>
     ) : null;
 
-    const ingredient2 = this.props.ingredient2.length ? (
+    const ingredient2 = this.props.ingredient2 ? (
       <div>
         <span>{this.props.ingredient2}</span>
         <br />
       </div>
     ) : null;
 
-    const ingredient3 = this.props.ingredient3.length ? (
+    const ingredient3 = this.props.ingredient3 ? (
       <div>
         <span>{this.props.ingredient3}</span>
         <br />
       </div>
     ) : null;
 
-    const ingredient4 = this.props.ingredient4.length ? (
+    const ingredient4 = this.props.ingredient4 ? (
       <div>
         <span>{this.props.ingredient4}</span>
         <br />
       </div>
     ) : null;
 
-    const ingredient5 = this.props.ingredient5.length ? (
+    const ingredient5 = this.props.ingredient5 ? (
       <div>
         <span>{this.props.ingredient5}</span>
         <br />
       </div>
     ) : null;
 
-    const ingredient6 = this.props.ingredient6.length ? (
+    const ingredient6 = this.props.ingredient6 ? (
       <div>
         <span>{this.props.ingredient6}</span>
         <br />
