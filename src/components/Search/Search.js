@@ -59,7 +59,7 @@ export default class Search extends React.Component {
 
     let noResultsMessage = this.state.showNoResultsText
       ? "No Results, Try Again"
-      : null;
+      : "";
 
     return (
       <section role="search">
